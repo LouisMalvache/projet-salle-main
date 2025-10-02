@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitapp - Ma Passion Musculation</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Ton CSS personnalisé -->
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-custom" href="programmes.html">
+        <i class="bi bi-heart-pulse me-2"></i>FitAPP
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="accueil.html"><i
+                class="bi bi-house-door-fill me-1"></i>Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="seance.html"><i class="bi bi-heart-fill me-1"></i>Séances</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="programmes.html"><i
+                class="bi bi-activity me-1"></i>Programmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="nutrition.html"><i class="bi bi-apple me-1"></i>Nutrition</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                class="bi bi-envelope-fill me-1"></i>Contact</a></li>
+        </ul>
+        <div class="ms-auto d-flex">
+          <a href="cv francais.html" class="btn btn-outline-light btn-sm me-2">cv</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <h1><i class="bi bi-calendar3 me-3"></i>Programmes d'Entraînement</h1>
+            <p>Choisissez le programme qui correspond à votre disponibilité et à vos objectifs. Chaque programme est
+                conçu pour une progression optimale.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4 fade-in" id="program-selection">
+            <div class="col-lg-3 col-md-6">
+                <div class="card program-card text-center" data-program="2days">
+                    <i class="bi bi-calendar-week program-icon"></i>
+                    <span class="days-badge">2 Jours / Semaine</span>
+                    <h3>Programme Débutant</h3>
+                    <p>Idéal pour débuter ou avec un emploi du temps chargé</p>
+                    <ul class="program-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Full Body</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Récupération maximale</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card program-card text-center" data-program="3days">
+                    <i class="bi bi-fire program-icon"></i>
+                    <span class="days-badge">3 Jours / Semaine</span>
+                    <h3>Programme Intermédiaire</h3>
+                    <p>Équilibre parfait entre progression et récupération</p>
+                    <ul class="program-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Push / Pull / Legs</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Volume optimal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card program-card text-center" data-program="4days">
+                    <i class="bi bi-lightning-fill program-icon"></i>
+                    <span class="days-badge">4 Jours / Semaine</span>
+                    <h3>Programme Avancé</h3>
+                    <p class="">Pour ceux qui veulent accélérer leurs résultats</p>
+                    <ul class="program-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Upper / Lower Split</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Haute fréquence</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card program-card text-center" data-program="5days">
+                    <i class="bi bi-trophy-fill program-icon"></i>
+                    <span class="days-badge">5 Jours / Semaine</span>
+                    <h3>Programme Expert</h3>
+                    <p>Maximum de volume et de spécialisation</p>
+                    <ul class="program-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Split 5 jours</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Volume maximal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="session-details" class="d-none">
+            <button class="btn-back" onclick="backToPrograms()">
+                <i class="bi bi-arrow-left"></i> Retour aux programmes
+            </button>
+            <h2 id="program-title"></h2>
+            <div id="days-container"></div>
+        </div>
+    </div>
+    <footer class="footer-custom">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-heart-pulse text-warning fs-2 me-2"></i>
+                <span>FitAPP © 2025</span>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/louis_mvc" class="social-icon me-3"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@louis_mvc" class="social-icon me-3"><i class="bi bi-tiktok"></i></a>
+                <a href="https://github.com/LouisMalvache" class="social-icon me-3"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Votre JavaScript personnalisé -->
+    <script src="main.js"></script>
+</body>
+
+</html>
