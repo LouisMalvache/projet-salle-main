@@ -339,3 +339,51 @@ body {
         max-width: 100%;
     }
 }
+
+
+
+
+.mur-collage {
+  position: relative;
+  width: 85%;
+  max-width: 900px;
+  margin: 50px auto;
+  height: 500px; 
+  padding-bottom: 40%;
+}
+
+@media (max-width: 600px) {
+  .photo {
+    width: 40%;   
+    max-width: none;
+  }
+}
+
+.photo {
+  position: absolute;
+  width: 22%;
+  max-width: 180px;
+  height: auto;
+  border: 6px solid white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+
+.photo:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
+
+.p1 { top: 0%; left: 20%; transform: rotate(-5deg); }
+.p2 { top: 15%; left: 35%; transform: rotate(8deg); }
+.p3 { top: 43%; left: 75%; transform: rotate(-7deg); }
+.p4 { top: 0%; left: 50%; transform: rotate(4deg); }
+.p5 {top: 30%; left: 10%; transform: rotate(-5deg);}
+.p6 {top: 0%; left: 75%;transform: rotate(15deg);}
+.p7 { top: 50%; left: 12%;transform: rotate(-25deg);}
+.p8 { top: 50%; left: 55%;transform: rotate(0deg);}
+.p9 { top: 35%; left: 35%;transform: rotate(6deg);}
+.p11 { top: 20%; left: 60%;transform: rotate(7deg);}
+.p12 { top: 10%; left: 0%;transform: rotate(-7deg);}
